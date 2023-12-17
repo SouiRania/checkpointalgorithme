@@ -1,0 +1,43 @@
+ALGORITHM algorithm_name
+VAR
+   ch:STRING;
+   nbm,nbv:INTEGER;
+   c:char;
+BEGIN
+    ch:='';
+  
+    // Read the la phrase
+    REPEAT
+        write("donner un caractere")
+        read(c)
+        ch=ch+c
+    UNTIL (c:='.')
+    /// bon annee.
+    //calculate nombre les mots 
+ 
+   REPEAT
+    esp:=0;
+    i=1;
+    IF (ch[i]:=' ') THEN
+        esp:=esp+1
+    END_IF
+    i:=i+1
+   UNTIL (c:='.')
+    write(" le nombre de mots est ",esp+1)
+    //calculer le nombre 
+    
+    
+
+    REPEAT
+    v:='AEUOIYaeuioy';
+    i:=1;
+   
+        FOR j FROM 1 TO v.lenght STEP 1 DO
+            IF (ch[i]=v[j]) THEN 
+            nbv=nbv+1
+      END_IF 
+       END_FOR
+
+    UNTIL (c:='.')
+    write(" le nombre de voyelle" est "nbv")
+END
